@@ -1,20 +1,20 @@
 radio.onReceivedNumber(function (receivedNumber) {
     x = receivedNumber
 })
-input.onButtonPressed(Button.A, function () {
-    angle += -10
-    if (angle < 0) {
-        angle = 0
-    }
-})
 input.onButtonPressed(Button.AB, function () {
-    angle += 10
+    angle += 15
     if (angle > 180) {
         angle = 180
     }
 })
 radio.onReceivedString(function (receivedString) {
     bouton = receivedString
+})
+input.onButtonPressed(Button.B, function () {
+    angle += -15
+    if (angle < 0) {
+        angle = 0
+    }
 })
 radio.onReceivedValue(function (name, value) {
     y = value
